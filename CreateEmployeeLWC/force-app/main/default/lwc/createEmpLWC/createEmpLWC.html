@@ -1,0 +1,29 @@
+<template>
+    <lightning-record-edit-form object-api-name="Employee__c" onsuccess={handleSuccess} >
+    <lightning-card title="Create Employee Record" icon-name="standard:account">
+        <div style="margin-left: 6%" if:true={error}>
+            <lightning-badge label={error} style="color: red;"></lightning-badge>
+        </div>
+
+        <template if:true={empRecord}>
+            <div class="slds-m-around--xx-large">
+                <div class="container-fluid">
+                    
+                    <div class="form-group">
+                        <lightning-input-field field-name="Account__c" onchange={handleIdChange}></lightning-input-field>
+                    </div>
+                
+                    <div class="form-group">
+                        <lightning-input label="Enter Employee Name" name="empName" required="required" type="text" value={empRecord.Name} onchange={handleNameChange}></lightning-input>
+                    </div>
+                    <div class="form-group">
+                        <lightning-input label="Enter Email" name="accEmail" type="email" value={empRecord.Email} onchange={handleEmailChange}></lightning-input>
+                    </div>
+                </div>
+                <br/>
+                <lightning-button label="Submit" onclick={handleSave} variant="brand"></lightning-button>
+            </div>
+        </template>
+    </lightning-card>
+</lightning-record-edit-form>
+</template>

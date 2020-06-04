@@ -1,0 +1,41 @@
+/*
+List<Account> acc = new List<Account>();
+List<Contact> con = new List<Contact>();
+public static List<Contact> myFunction(acc, con){
+    List<Contact> final = new List<Contact>();
+    for(Account a:acc){
+        for(Contact c:con){
+            if(c.Account == a.Id){
+                final.add(c);
+            }
+        }
+    }
+    return final;
+}
+*/
+
+User.Id = 'sqweh1i209'
+a  = 'sadasdas'
+if(User.Id == Account.Id)
+
+
+
+List<Account> acc = new List<Account>();
+List<Contact> con = new List<Contact>();
+public static List<Contact> myFunction(acc, con){
+    Map<Id, List<Contact>> final = new Map<Integer, List<Contact>>();
+    for(Account a:acc){
+        if(con.Account == a.Id){
+            final.add(con.Id, a.Contact);
+
+        }
+    }
+    return final;
+}
+
+/*
+    List<Account>
+    List<Contact>
+    con.Account == acc
+    account, contact
+*/
